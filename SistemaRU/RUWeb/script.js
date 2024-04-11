@@ -1,8 +1,22 @@
+// Função para mostrar as informações de acordo com o tipo selecionado
 function mostrarInformacoes(tipo) {
     var informacoes = document.getElementById('informacoes');
+    var caixaPesquisa = document.querySelector('.caixa-pesquisa');
 
-    // Limpa o conteúdo anterior, se houver
-    informacoes.innerHTML = '';
+    // Se a caixa de pesquisa existir, a remove
+    if (caixaPesquisa) {
+        caixaPesquisa.remove();
+    }
+
+    // Remove a classe ativo de todos os itens do menu
+    var itensMenu = document.querySelectorAll('.menu a');
+    itensMenu.forEach(function(item) {
+        item.classList.remove('ativo');
+    });
+
+    // Adiciona a classe ativo ao item do menu clicado
+    var itemClicado = document.querySelector('.menu a[href="#"][onclick*="' + tipo + '"]');
+    itemClicado.classList.add('ativo');
 
     // Cria a nova caixa de informações
     var novaCaixa = document.createElement('div');
@@ -26,23 +40,36 @@ function mostrarInformacoes(tipo) {
     }
     // Adicione mais casos conforme necessário
 
+    // Remove qualquer caixa de informações anterior
+    informacoes.innerHTML = '';
+
     // Adiciona a nova caixa de informações à div de informações
     informacoes.appendChild(novaCaixa);
 
     // Exibe a nova caixa de informações
     informacoes.style.display = 'block';
 
-    // Remove a classe ativo de todos os itens do menu
-    var itensMenu = document.querySelectorAll('.menu a');
-    itensMenu.forEach(function(item) {
-        item.classList.remove('ativo');
-    });
+    // Verifica se o tipo selecionado é "estoque"
+    if (tipo === 'estoque') {
+        // Cria a caixa de pesquisa
+        var caixaPesquisa = document.createElement('div');
+        caixaPesquisa.classList.add('caixa-pesquisa');
 
-    // Adiciona a classe ativo ao item do menu clicado
-    var itemClicado = document.querySelector('.menu a[href="#"][onclick*="' + tipo + '"]');
-    itemClicado.classList.add('ativo');
+        var inputPesquisa = document.createElement('input');
+        inputPesquisa.type = 'text';
+        inputPesquisa.placeholder = 'Buscar:';
+        caixaPesquisa.appendChild(inputPesquisa);
+
+        var botaoPesquisar = document.createElement('button');
+        botaoPesquisar.textContent = 'Pesquisar';
+        botaoPesquisar.classList.add('botao-pesquisar');
+        caixaPesquisa.appendChild(botaoPesquisar);
+
+        // Posiciona a caixa de pesquisa acima da caixa de informações, mas fora dela
+        caixaPesquisa.style.top = (document.querySelector('.menu-container').offsetTop - 50) + 'px'; // 50px de margem
+        caixaPesquisa.style.left = informacoes.offsetLeft + 'px'; // Mesma posição horizontal da caixa de informações
+
+        // Adiciona a caixa de pesquisa ao body
+        document.body.appendChild(caixaPesquisa);
+    }
 }
-
-
-
-

@@ -25,7 +25,6 @@ body {
     align-items: flex-start; /* Alinha os itens à esquerda */
 }
 
-
 .menu li {
     margin-bottom: 15px; /* Espaçamento entre os itens da lista */
 }
@@ -71,7 +70,6 @@ body {
     transition: background-color 0.2s ease; /* Adiciona uma transição para a mudança de cor */
 }
 
-
 /* Fundo em degradê de azul claro para rosa claro */
 body::before {
     content: "";
@@ -86,9 +84,9 @@ body::before {
 
 .informacoes {
     position: fixed;
-    top: 175px; /* Posicionamento abaixo da caixa do menu */
-    left: 250px; /* Posicionamento ao lado da caixa do menu */
-    right: 25px; /* Espaçamento lateral direito */
+    top: 225px; /* Posicionamento abaixo da caixa do menu */
+    left: 300px; /* Posicionamento ao lado da caixa do menu */
+    right: 50px; /* Espaçamento lateral direito */
     bottom: 100px; /* Espaçamento inferior */
     overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
     background-color: #ffffff;
@@ -97,7 +95,6 @@ body::before {
     z-index: 2; /* Garante que as informações estejam acima do menu */
     display: none; /* Inicialmente oculta a caixa de informações */
 }
-
 
 .caixa-informacoes {
     background-color: #ffffff;
@@ -108,3 +105,36 @@ body::before {
     overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura máxima */
 }
 
+.caixa-pesquisa {
+    position: absolute;
+    top: 140px !important; /* Posicionamento um pouco mais para baixo */
+    left: 920px !important; /* Mesma posição horizontal que a caixa de informações */
+    z-index: 2;
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.caixa-pesquisa input[type="text"] {
+    width: calc(800px); /* Largura ajustada para alinhar com o botão */
+    margin-right: 10px;
+    padding: 8px; /* Ajuste do preenchimento interno */
+}
+
+.caixa-pesquisa input[type="text"],
+.caixa-pesquisa button {
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: 16px;
+}
+
+.caixa-pesquisa button {
+    width: 120px; /* Largura do botão */
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.caixa-pesquisa button:hover {
+    background-color: #ebb52c; /* Cor de destaque quando passar o mouse */
+}
