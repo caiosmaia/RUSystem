@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class Estoque extends JPanel {
     private JTextField searchField;
@@ -25,7 +28,7 @@ public class Estoque extends JPanel {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adicionar lógica para adicionar novo item
+                new AddEstoqueForm(); // Cria uma instância do formulário de adicionar estoque
             }
         });
         searchPanel.add(addButton, BorderLayout.EAST);
@@ -44,6 +47,7 @@ public class Estoque extends JPanel {
         add(scrollPane, BorderLayout.CENTER);
     }
 
+    
     private void setSearchPlaceholder(String placeholder) {
         searchField.setText(placeholder);
         searchField.setForeground(Color.GRAY);
