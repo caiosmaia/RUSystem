@@ -5,12 +5,13 @@ import java.awt.event.MouseEvent;
 
 public class Menu extends JFrame {
     private JPanel menuPanel;
+    private JPanel contentPanel;
     private String[] modules = {"Estoque", "Função", "Funcionários", "Refeição", "Pedido", "Financeiro"};
 
     public Menu() {
         setTitle("Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 300);
+        setSize(800, 600);
 
         // Cria um JPanel personalizado para o fundo degradê
         JPanel backgroundPanel = new JPanel() {
@@ -36,6 +37,10 @@ public class Menu extends JFrame {
         // Adiciona o JPanel personalizado ao JFrame
         setContentPane(backgroundPanel);
 
+        contentPanel = new JPanel();
+        contentPanel.setLayout(new BorderLayout());
+        backgroundPanel.add(contentPanel, BorderLayout.CENTER);
+
         for (String module : modules) {
             JLabel moduleLabel = new JLabel(module, SwingConstants.CENTER);
             moduleLabel.setForeground(new Color(50, 50, 150)); // Cor do texto azul pastel
@@ -43,6 +48,21 @@ public class Menu extends JFrame {
             moduleLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Espaçamento interno
 
             moduleLabel.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    // Limpa o conteúdo anterior
+                    contentPanel.removeAll();
+                    contentPanel.repaint();
+
+                    // Adiciona o novo conteúdo da aba selecionada
+                    if (module.equals("Estoque")) {
+                        contentPanel.add(new Estoque());
+                    }
+                    // Repita para as outras abas...
+                    contentPanel.revalidate();
+                    contentPanel.repaint();
+                }
+
                 @Override
                 public void mouseEntered(MouseEvent e) {
                     animate(moduleLabel, 10); // Animação de 10 pixels para a direita
