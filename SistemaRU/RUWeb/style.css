@@ -138,3 +138,26 @@ body::before {
 .caixa-pesquisa button:hover {
     background-color: #ebb52c; /* Cor de destaque quando passar o mouse */
 }
+
+.caixa-pesquisa-funcionarios {
+    left: 790px !important; /* Ajusta a posição para a esquerda */
+}
+
+.botoes-container {
+    display: flex; /* Define o contêiner como um elemento flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.caixa-pesquisa .botao-cadastrar {
+    width: 120px; /* Largura do botão */
+    background-color: rgb(3, 139, 3); /* Cor verde */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-left: 10px; /* Adiciona margem à esquerda para separar os botões */
+}
+
+.caixa-pesquisa .botao-cadastrar:hover {
+    background-color: rgb(20, 177, 20); /* Cor de destaque quando passar o mouse */
+}

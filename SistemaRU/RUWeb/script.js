@@ -71,5 +71,34 @@ function mostrarInformacoes(tipo) {
 
         // Adiciona a caixa de pesquisa ao body
         document.body.appendChild(caixaPesquisa);
+    } else if (tipo === 'funcionarios') {
+        // Cria a caixa de pesquisa
+        var caixaPesquisa = document.createElement('div');
+        caixaPesquisa.classList.add('caixa-pesquisa', 'caixa-pesquisa-funcionarios');
+    
+        var botoesContainer = document.createElement('div');
+        botoesContainer.classList.add('botoes-container');
+
+        var inputPesquisa = document.createElement('input');
+        inputPesquisa.type = 'text';
+        inputPesquisa.placeholder = 'Buscar:';
+        caixaPesquisa.appendChild(inputPesquisa);
+    
+        var botaoPesquisar = document.createElement('button');
+        botaoPesquisar.textContent = 'Pesquisar';
+        botaoPesquisar.classList.add('botao-pesquisar');
+        caixaPesquisa.appendChild(botaoPesquisar);
+    
+        var botaoCadastrar = document.createElement('button'); // Novo botão
+        botaoCadastrar.textContent = 'Cadastrar'; // Texto "Cadastrar"
+        botaoCadastrar.classList.add('botao-cadastrar'); // Classe para estilização
+        caixaPesquisa.appendChild(botaoCadastrar); // Adiciona o botão ao elemento
+    
+        // Posiciona a caixa de pesquisa acima da caixa de informações, mas fora dela
+        caixaPesquisa.style.top = (document.querySelector('.menu-container').offsetTop - 50) + 'px'; // 50px de margem
+        caixaPesquisa.style.left = informacoes.offsetLeft + 'px'; // Mesma posição horizontal da caixa de informações
+    
+        // Adiciona a caixa de pesquisa ao body
+        document.body.appendChild(caixaPesquisa);
     }
 }
