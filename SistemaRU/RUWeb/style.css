@@ -42,13 +42,35 @@ body {
     font-family: "Arial Rounded MT Bold", sans-serif; /* Fonte arredondada */
     font-size: 18px; /* Tamanho da fonte aumentado */
     margin-bottom: 10px; /* Espaçamento entre os itens */
+    transition: margin-left 0.2s ease; /* Adiciona uma transição para o deslocamento do item */
+    position: relative; /* Adiciona posição relativa ao item do menu */
+    display: inline-block; /* Permite que os elementos se comportem como blocos */
 }
-
-
 
 .menu li a:hover {
-    text-decoration: underline; /* Efeito de sublinhar ao passar o mouse nos links do menu */
+    margin-left: 5px; /* Desloca o item para a esquerda ao passar o mouse */
 }
+
+.menu li a:hover::after {
+    background-color: black; /* Cor mais escura para a linha ao passar o mouse */
+}
+
+.menu li a.ativo {
+    margin-left: 5px; /* Deslocamento do item */
+}
+
+.menu li a.ativo::after {
+    content: ''; /* Adiciona conteúdo ao pseudo-elemento */
+    position: absolute; /* Posiciona o pseudo-elemento absolutamente em relação ao item do menu */
+    bottom: 0; /* Posiciona o pseudo-elemento na parte inferior do item do menu */
+    left: 50%; /* Alinha o pseudo-elemento à metade do item do menu */
+    transform: translateX(-50%); /* Move o pseudo-elemento para a esquerda pela metade da largura do próprio elemento */
+    width: 50%; /* Define a largura da linha como 50% da largura do item do menu */
+    height: 2px; /* Define a altura da linha */
+    background-color: #A9A9A9; /* Cor um pouco mais clara para a linha */
+    transition: background-color 0.2s ease; /* Adiciona uma transição para a mudança de cor */
+}
+
 
 /* Fundo em degradê de azul claro para rosa claro */
 body::before {

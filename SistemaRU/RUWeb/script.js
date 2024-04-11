@@ -1,6 +1,6 @@
 function mostrarInformacoes(tipo) {
     var informacoes = document.getElementById('informacoes');
-    
+
     // Limpa o conteúdo anterior, se houver
     informacoes.innerHTML = '';
 
@@ -24,10 +24,25 @@ function mostrarInformacoes(tipo) {
     } else if (tipo === 'fornecedores') {
         novaCaixa.textContent = 'Informações sobre fornecedores';
     }
+    // Adicione mais casos conforme necessário
 
     // Adiciona a nova caixa de informações à div de informações
     informacoes.appendChild(novaCaixa);
 
     // Exibe a nova caixa de informações
     informacoes.style.display = 'block';
+
+    // Remove a classe ativo de todos os itens do menu
+    var itensMenu = document.querySelectorAll('.menu a');
+    itensMenu.forEach(function(item) {
+        item.classList.remove('ativo');
+    });
+
+    // Adiciona a classe ativo ao item do menu clicado
+    var itemClicado = document.querySelector('.menu a[href="#"][onclick*="' + tipo + '"]');
+    itemClicado.classList.add('ativo');
 }
+
+
+
+
