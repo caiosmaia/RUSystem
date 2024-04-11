@@ -62,22 +62,23 @@ body::before {
     z-index: -1; /* Para colocar o degradê atrás de todo o conteúdo */
 }
 
-/* Seus estilos existentes aqui */
-
-/* Seus estilos existentes aqui */
-
 .informacoes {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 175px; /* Posicionamento abaixo da caixa do menu */
+    left: 250px; /* Posicionamento ao lado da caixa do menu */
+    right: 25px; /* Espaçamento lateral direito */
+    bottom: 100px; /* Espaçamento inferior */
+    overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 20px;
     z-index: 2; /* Garante que as informações estejam acima do menu */
     display: none; /* Inicialmente oculta a caixa de informações */
 }
 
+
 .caixa-informacoes {
     background-color: #ffffff;
-    border: 1px solid #000000;
     padding: 20px;
     width: 300px;
     max-width: 80%; /* Defina o tamanho máximo conforme necessário */
