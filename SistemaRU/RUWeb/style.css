@@ -140,7 +140,7 @@ body::before {
 }
 
 .caixa-pesquisa-botoes {
-    left: 790px !important; /* Ajusta a posição para a esquerda */
+    left: 790px !important; /* Ajusta a posição para a esquerda, para telas que tenham botoes de pesquisa e cadastro*/
 }
 
 .botoes-container {
