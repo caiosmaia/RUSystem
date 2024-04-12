@@ -100,5 +100,23 @@ function mostrarInformacoes(tipo) {
     
         // Adiciona a caixa de pesquisa ao body
         document.body.appendChild(caixaPesquisa);
+        
+        // Adiciona um manipulador de eventos ao botão de cadastro
+        botaoCadastrar.addEventListener('click', function() {
+            abrirFormulario();
+        });
     }
 }
+
+// Função para abrir o formulário de cadastro
+function abrirFormulario() {
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'block';
+}
+
+// Função para fechar o formulário de cadastro
+function fecharFormulario() {
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+}
+
