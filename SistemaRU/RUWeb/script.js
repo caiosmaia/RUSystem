@@ -53,7 +53,7 @@ function mostrarInformacoes(tipo) {
     if (tipo === 'estoque') {
         // Cria a caixa de pesquisa
         var caixaPesquisa = document.createElement('div');
-        caixaPesquisa.classList.add('caixa-pesquisa');
+        caixaPesquisa.classList.add('caixa-pesquisa', 'caixa-pesquisa-botoes');
 
         var inputPesquisa = document.createElement('input');
         inputPesquisa.type = 'text';
@@ -71,10 +71,22 @@ function mostrarInformacoes(tipo) {
 
         // Adiciona a caixa de pesquisa ao body
         document.body.appendChild(caixaPesquisa);
+
+        // Cria o botão de cadastro para produtos no estoque
+        var botaoCadastrarEstoque = document.createElement('button'); // Novo botão
+        botaoCadastrarEstoque.textContent = 'Cadastrar'; // Texto "Cadastrar Produto"
+        botaoCadastrarEstoque.classList.add('botao-cadastrar'); // Classe para estilização
+        caixaPesquisa.appendChild(botaoCadastrarEstoque); // Adiciona o botão ao elemento
+
+        // Adiciona um manipulador de eventos ao botão de cadastro de produtos no estoque
+        botaoCadastrarEstoque.addEventListener('click', function() {
+            abrirFormularioEstoque();
+        });
+        
     } else if (tipo === 'funcionarios') {
         // Cria a caixa de pesquisa
         var caixaPesquisa = document.createElement('div');
-        caixaPesquisa.classList.add('caixa-pesquisa', 'caixa-pesquisa-funcionarios');
+        caixaPesquisa.classList.add('caixa-pesquisa', 'caixa-pesquisa-botoes');
     
         var botoesContainer = document.createElement('div');
         botoesContainer.classList.add('botoes-container');
@@ -108,15 +120,26 @@ function mostrarInformacoes(tipo) {
     }
 }
 
+// Função para abrir o formulário de cadastro de produtos no estoque
+function abrirFormularioEstoque() {
+    var overlay = document.getElementById('overlayProduto'); // Alterado para overlayProduto
+    overlay.style.display = 'block';
+}
+
+// Função para fechar o formulário de cadastro
+function fecharFormularioEstoque() {
+    var overlay = document.getElementById('overlayProduto');
+    overlay.style.display = 'none';
+}
 // Função para abrir o formulário de cadastro
 function abrirFormulario() {
-    var overlay = document.getElementById('overlay');
+    var overlay = document.getElementById('overlayFuncionario');
     overlay.style.display = 'block';
 }
 
 // Função para fechar o formulário de cadastro
 function fecharFormulario() {
-    var overlay = document.getElementById('overlay');
+    var overlay = document.getElementById('overlayFuncionario');
     overlay.style.display = 'none';
 }
 

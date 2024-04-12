@@ -139,7 +139,7 @@ body::before {
     background-color: #ebb52c; /* Cor de destaque quando passar o mouse */
 }
 
-.caixa-pesquisa-funcionarios {
+.caixa-pesquisa-botoes {
     left: 790px !important; /* Ajusta a posição para a esquerda */
 }
 

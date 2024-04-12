@@ -23,7 +23,7 @@
         <!-- Aqui serão exibidas as informações -->
     </div>
 
-    <div id="overlay" class="overlay">
+    <div id="overlayFuncionario" class="overlay">
         <div class="formulario-cadastro">
             <h2>Cadastro de Funcionário</h2>
             <form>
@@ -59,6 +59,50 @@
     
                 <button type="submit">Cadastrar</button>
                 <button type="button" onclick="fecharFormulario()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <div id="overlayProduto" class="overlay">
+        <div class="formulario-cadastro">
+            <h2>Cadastro de Produto</h2>
+            <form>
+                <label for="nomeProduto">Nome do Produto:</label>
+                <input type="text" id="nomeProduto" name="nomeProduto" required><br><br>
+    
+                <label for="responsavel">Responsável:</label>
+                <input type="text" id="responsavel" name="responsavel"><br><br>
+    
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria">
+                    <option value="Secos">Secos</option>
+                    <option value="Frios">Frios</option>
+                    <option value="Hortifrúti">Hortifrúti</option>
+                    <option value="Limpeza">Limpeza</option>
+                </select><br><br>
+    
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade"><br><br>
+    
+                <label for="medida">Medida:</label>
+                <select id="medida" name="medida">
+                    <option value="Kg">Kg</option>
+                    <option value="Unidades">Unidades</option>
+                </select><br><br>
+    
+                <label for="dataValidade">Data de Validade:</label>
+                <input type="date" id="dataValidade" name="dataValidade"><br><br>
+    
+                <label for="fornecedor">Fornecedor:</label>
+                <select id="fornecedor" name="fornecedor">
+                    <option value="F1">F1</option>
+                    <option value="F2">F2</option>
+                    <option value="F3">F3</option>
+                </select><br><br>
+    
+                <button type="submit">Cadastrar</button>
+                <button type="button" onclick="fecharFormularioEstoque()">Cancelar</button>
             </form>
         </div>
     </div>
