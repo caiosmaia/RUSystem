@@ -117,6 +117,142 @@ function mostrarInformacoes(tipo) {
         botaoCadastrar.addEventListener('click', function() {
             abrirFormulario();
         });
+    } else if (tipo === 'fornecedores') {
+        // Crie a caixa de pesquisa
+        var caixaPesquisa = document.createElement('div');
+        caixaPesquisa.classList.add('caixa-pesquisa');
+    
+        var botoesContainer = document.createElement('div');
+        botoesContainer.classList.add('botoes-container');
+    
+        var inputPesquisa = document.createElement('input');
+        inputPesquisa.type = 'text';
+        inputPesquisa.placeholder = 'Buscar:';
+        caixaPesquisa.appendChild(inputPesquisa);
+    
+        var botaoPesquisar = document.createElement('button');
+        botaoPesquisar.textContent = 'Pesquisar';
+        botaoPesquisar.classList.add('botao-pesquisar');
+        caixaPesquisa.appendChild(botaoPesquisar);
+    
+        var botaoCadastrar = document.createElement('button');
+        botaoCadastrar.textContent = 'Cadastrar';
+        botaoCadastrar.classList.add('botao-cadastrar');
+        caixaPesquisa.appendChild(botaoCadastrar);
+    
+        // Posicione a caixa de pesquisa acima da caixa de informações, mas fora dela
+        caixaPesquisa.style.top = (document.querySelector('.menu-container').offsetTop - 50) + 'px'; // 50px de margem
+        caixaPesquisa.style.left = informacoes.offsetLeft + 'px'; // Mesma posição horizontal da caixa de informações
+    
+        // Adicione a caixa de pesquisa ao body
+        document.body.appendChild(caixaPesquisa);
+    
+        // Adicione um manipulador de eventos ao botão de cadastro
+        botaoCadastrar.addEventListener('click', function() {
+            abrirFormularioFornecedor();
+        });
+    } else if (tipo === 'funcao') {
+        // Crie a caixa de pesquisa
+        var caixaPesquisa = document.createElement('div');
+        caixaPesquisa.classList.add('caixa-pesquisa');
+    
+        var botoesContainer = document.createElement('div');
+        botoesContainer.classList.add('botoes-container');
+    
+        var inputPesquisa = document.createElement('input');
+        inputPesquisa.type = 'text';
+        inputPesquisa.placeholder = 'Buscar:';
+        caixaPesquisa.appendChild(inputPesquisa);
+    
+        var botaoPesquisar = document.createElement('button');
+        botaoPesquisar.textContent = 'Pesquisar';
+        botaoPesquisar.classList.add('botao-pesquisar');
+        caixaPesquisa.appendChild(botaoPesquisar);
+    
+        var botaoCadastrar = document.createElement('button');
+        botaoCadastrar.textContent = 'Cadastrar';
+        botaoCadastrar.classList.add('botao-cadastrar');
+        caixaPesquisa.appendChild(botaoCadastrar);
+    
+        // Posicione a caixa de pesquisa acima da caixa de informações, mas fora dela
+        caixaPesquisa.style.top = (document.querySelector('.menu-container').offsetTop - 50) + 'px'; // 50px de margem
+        caixaPesquisa.style.left = informacoes.offsetLeft + 'px'; // Mesma posição horizontal da caixa de informações
+    
+        // Adicione a caixa de pesquisa ao body
+        document.body.appendChild(caixaPesquisa);
+    
+        // Adicione um manipulador de eventos ao botão de cadastro
+        botaoCadastrar.addEventListener('click', function() {
+            abrirFormularioFuncao();
+        });
+    } else if (tipo === 'refeicao') {
+        // Crie a caixa de pesquisa
+        var caixaPesquisa = document.createElement('div');
+        caixaPesquisa.classList.add('caixa-pesquisa');
+    
+        var botoesContainer = document.createElement('div');
+        botoesContainer.classList.add('botoes-container');
+    
+        var inputPesquisa = document.createElement('input');
+        inputPesquisa.type = 'text';
+        inputPesquisa.placeholder = 'Buscar:';
+        caixaPesquisa.appendChild(inputPesquisa);
+    
+        var botaoPesquisar = document.createElement('button');
+        botaoPesquisar.textContent = 'Pesquisar';
+        botaoPesquisar.classList.add('botao-pesquisar');
+        caixaPesquisa.appendChild(botaoPesquisar);
+    
+        var botaoCadastrar = document.createElement('button');
+        botaoCadastrar.textContent = 'Cadastrar';
+        botaoCadastrar.classList.add('botao-cadastrar');
+        caixaPesquisa.appendChild(botaoCadastrar);
+    
+        // Posicione a caixa de pesquisa acima da caixa de informações, mas fora dela
+        caixaPesquisa.style.top = (document.querySelector('.menu-container').offsetTop - 50) + 'px'; // 50px de margem
+        caixaPesquisa.style.left = informacoes.offsetLeft + 'px'; // Mesma posição horizontal da caixa de informações
+    
+        // Adicione a caixa de pesquisa ao body
+        document.body.appendChild(caixaPesquisa);
+    
+        // Adicione um manipulador de eventos ao botão de cadastro
+        botaoCadastrar.addEventListener('click', function() {
+            abrirFormularioRefeicao();
+        });
+    } else if (tipo === 'pedido') {
+        // Crie a caixa de pesquisa
+        var caixaPesquisa = document.createElement('div');
+        caixaPesquisa.classList.add('caixa-pesquisa');
+    
+        var botoesContainer = document.createElement('div');
+        botoesContainer.classList.add('botoes-container');
+    
+        var inputPesquisa = document.createElement('input');
+        inputPesquisa.type = 'text';
+        inputPesquisa.placeholder = 'Buscar:';
+        caixaPesquisa.appendChild(inputPesquisa);
+    
+        var botaoPesquisar = document.createElement('button');
+        botaoPesquisar.textContent = 'Pesquisar';
+        botaoPesquisar.classList.add('botao-pesquisar');
+        caixaPesquisa.appendChild(botaoPesquisar);
+    
+        var botaoCadastrar = document.createElement('button');
+        botaoCadastrar.textContent = 'Novo';
+        botaoCadastrar.classList.add('botao-cadastrar');
+        caixaPesquisa.appendChild(botaoCadastrar);
+    
+        // Posicione a caixa de pesquisa acima da caixa de informações, mas fora dela
+        caixaPesquisa.style.top = (document.querySelector('.menu-container').offsetTop - 50) + 'px'; // 50px de margem
+        caixaPesquisa.style.left = informacoes.offsetLeft + 'px'; // Mesma posição horizontal da caixa de informações
+    
+        // Adicione a caixa de pesquisa ao body
+        document.body.appendChild(caixaPesquisa);
+    
+        // Adicione um manipulador de eventos ao botão de cadastro
+        botaoCadastrar.addEventListener('click', function() {
+            abrirFormularioPedido();
+        });
     }
 }
 
@@ -143,3 +279,42 @@ function fecharFormulario() {
     overlay.style.display = 'none';
 }
 
+function abrirFormularioFornecedor() {
+    var overlay = document.getElementById('overlayFornecedor');
+    overlay.style.display = 'block';
+}
+
+function fecharFormularioFornecedor() {
+    var overlay = document.getElementById('overlayFornecedor');
+    overlay.style.display = 'none';
+}
+
+function abrirFormularioFuncao() {
+    var overlay = document.getElementById('overlayFuncao');
+    overlay.style.display = 'block';
+}
+
+function fecharFormularioFuncao() {
+    var overlay = document.getElementById('overlayFuncao');
+    overlay.style.display = 'none';
+}
+
+function abrirFormularioRefeicao() {
+    var overlay = document.getElementById('overlayRefeicao');
+    overlay.style.display = 'block';
+}
+
+function fecharFormularioRefeicao() {
+    var overlay = document.getElementById('overlayRefeicao');
+    overlay.style.display = 'none';
+}
+
+function abrirFormularioPedido() {
+    var overlay = document.getElementById('overlayPedido');
+    overlay.style.display = 'block';
+}
+
+function fecharFormularioPedido() {
+    var overlay = document.getElementById('overlayPedido');
+    overlay.style.display = 'none';
+}
