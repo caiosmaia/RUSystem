@@ -53,7 +53,7 @@ function mostrarInformacoes(tipo) {
     if (tipo === 'estoque') {
         // Cria a caixa de pesquisa
         var caixaPesquisa = document.createElement('div');
-        caixaPesquisa.classList.add('caixa-pesquisa', 'caixa-pesquisa-botoes');
+        caixaPesquisa.classList.add('caixa-pesquisa');
 
         var inputPesquisa = document.createElement('input');
         inputPesquisa.type = 'text';
@@ -86,7 +86,7 @@ function mostrarInformacoes(tipo) {
     } else if (tipo === 'funcionarios') {
         // Cria a caixa de pesquisa
         var caixaPesquisa = document.createElement('div');
-        caixaPesquisa.classList.add('caixa-pesquisa', 'caixa-pesquisa-botoes');
+        caixaPesquisa.classList.add('caixa-pesquisa');
     
         var botoesContainer = document.createElement('div');
         botoesContainer.classList.add('botoes-container');

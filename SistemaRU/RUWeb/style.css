@@ -34,7 +34,6 @@ body {
 }
 
 .menu li a {
-    display: block;
     text-decoration: none;
     color: #000000;
     padding: 10px 0; /* Aumenta o espaçamento interno dos itens */
@@ -108,14 +107,13 @@ body::before {
 .caixa-pesquisa {
     position: absolute;
     top: 140px !important; /* Posicionamento um pouco mais para baixo */
-    left: 920px !important; /* Mesma posição horizontal que a caixa de informações */
     z-index: 2;
     display: flex; /* Usa flexbox */
     align-items: center; /* Alinha os itens verticalmente */
 }
 
 .caixa-pesquisa input[type="text"] {
-    width: calc(800px); /* Largura ajustada para alinhar com o botão */
+    width: calc(80%); /* Largura ajustada para alinhar com o botão */
     margin-right: 10px;
     padding: 8px; /* Ajuste do preenchimento interno */
 }
@@ -137,10 +135,6 @@ body::before {
 
 .caixa-pesquisa button:hover {
     background-color: #ebb52c; /* Cor de destaque quando passar o mouse */
-}
-
-.caixa-pesquisa-botoes {
-    left: 790px !important; /* Ajusta a posição para a esquerda, para telas que tenham botoes de pesquisa e cadastro*/
 }
 
 .botoes-container {
