@@ -18,7 +18,7 @@ body {
 /* Estilos para os itens da lista do menu */
 .menu {
     list-style-type: none;
-    padding: 10px; /* Adicione a margem desejada aqui */
+    padding: 10px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -38,7 +38,7 @@ body {
     color: #000000;
     padding: 10px 0; /* Aumenta o espaçamento interno dos itens */
     font-family: "Arial Rounded MT Bold", sans-serif; /* Fonte arredondada */
-    font-size: 18px; /* Tamanho da fonte aumentado */
+    font-size: 18px; /* Tamanho da fonte */
     margin-bottom: 10px; /* Espaçamento entre os itens */
     transition: margin-left 0.2s ease; /* Adiciona uma transição para o deslocamento do item */
     position: relative; /* Adiciona posição relativa ao item do menu */
@@ -65,7 +65,7 @@ body {
     transform: translateX(-50%); /* Move o pseudo-elemento para a esquerda pela metade da largura do próprio elemento */
     width: 50%; /* Define a largura da linha como 50% da largura do item do menu */
     height: 2px; /* Define a altura da linha */
-    background-color: #A9A9A9; /* Cor um pouco mais clara para a linha */
+    background-color: #A9A9A9; /* Cor da linha */
     transition: background-color 0.2s ease; /* Adiciona uma transição para a mudança de cor */
 }
 
@@ -99,16 +99,16 @@ body::before {
     background-color: #ffffff;
     padding: 20px;
     width: 300px;
-    max-width: 80%; /* Defina o tamanho máximo conforme necessário */
-    max-height: 80%; /* Defina a altura máxima conforme necessário */
+    max-width: 80%;
+    max-height: 80%;
     overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura máxima */
 }
 
 .caixa-pesquisa {
     position: absolute;
-    top: 140px !important; /* Posicionamento um pouco mais para baixo */
+    top: 140px !important;
     z-index: 2;
-    display: flex; /* Usa flexbox */
+    display: flex;
     align-items: center; /* Alinha os itens verticalmente */
 }
 
@@ -144,7 +144,7 @@ body::before {
 
 .caixa-pesquisa .botao-cadastrar {
     width: 120px; /* Largura do botão */
-    background-color: rgb(3, 139, 3); /* Cor verde */
+    background-color: rgb(3, 139, 3);
     color: white;
     border: none;
     padding: 8px 12px;
@@ -186,7 +186,7 @@ body::before {
 .formulario-cadastro button {
     font-size: 18px; /* Ajusta o tamanho da fonte para os campos de entrada, áreas de texto, seletores e botões */
     border-radius: 5px; /* Arredonda as bordas */
-    font-family: 'Arial Rounded MT Bold', sans-serif; /* Define a fonte mais arredondada */
+    font-family: 'Arial Rounded MT Bold', sans-serif;
     border: none; /* Remove a borda */
     outline: none; /* Remove o contorno ao focar */
     box-shadow: none; /* Remove o sombreado */
