@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão RU UESB</title>
@@ -237,6 +239,29 @@
     
                 <button type="submit">Fazer Pedido</button>
                 <button type="button" onclick="fecharFormularioPedido()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="overlayFinanceiro" class="overlay">
+        <div class="formulario-cadastro">
+            <h2>Adicionar Caixa</h2>
+            <form>
+                <label for="dataCaixa">Data do Caixa:</label>
+                <input type="date" id="dataCaixa" name="dataCaixa" required><br><br>
+
+                <label for="ValorRecebido">Valor Recebido:</label>
+                <input type="number" id="ValorRecebido" name="ValorRecebido" required><br><br>
+    
+                <label for="Refeicao">Refeição:</label>
+                <select id="Refeicao" name="Refeicao" required>
+                    <option value="F1">Café da manha</option>
+                    <option value="F2">Almoço</option>
+                    <option value="F3">Jantar </option>
+                </select><br><br>
+    
+                <button type="submit">Adicionar</button>
+                <button type="button" onclick="fecharFormularioFinanceiro()">Cancelar</button>
             </form>
         </div>
     </div>

@@ -253,6 +253,40 @@ function mostrarInformacoes(tipo) {
         botaoCadastrar.addEventListener('click', function() {
             abrirFormularioPedido();
         });
+    } else if (tipo === 'financeiro') {
+        // Crie a caixa de pesquisa
+        var caixaPesquisa = document.createElement('div');
+        caixaPesquisa.classList.add('caixa-pesquisa');
+    
+        var botoesContainer = document.createElement('div');
+        botoesContainer.classList.add('botoes-container');
+    
+        var inputPesquisa = document.createElement('input');
+        inputPesquisa.type = 'text';
+        inputPesquisa.placeholder = 'Buscar:';
+        caixaPesquisa.appendChild(inputPesquisa);
+    
+        var botaoPesquisar = document.createElement('button');
+        botaoPesquisar.textContent = 'Filtrar';
+        botaoPesquisar.classList.add('botao-pesquisar');
+        caixaPesquisa.appendChild(botaoPesquisar);
+    
+        var botaoCadastrar = document.createElement('button');
+        botaoCadastrar.textContent = 'Adicionar';
+        botaoCadastrar.classList.add('botao-cadastrar');
+        caixaPesquisa.appendChild(botaoCadastrar);
+    
+        // Posicione a caixa de pesquisa acima da caixa de informações, mas fora dela
+        caixaPesquisa.style.top = (document.querySelector('.menu-container').offsetTop - 50) + 'px'; // 50px de margem
+        caixaPesquisa.style.left = informacoes.offsetLeft + 'px'; // Mesma posição horizontal da caixa de informações
+    
+        // Adicione a caixa de pesquisa ao body
+        document.body.appendChild(caixaPesquisa);
+    
+        // Adicione um manipulador de eventos ao botão de cadastro
+        botaoCadastrar.addEventListener('click', function() {
+            abrirFormularioFinanceiro();
+        });
     }
 }
 
@@ -316,5 +350,15 @@ function abrirFormularioPedido() {
 
 function fecharFormularioPedido() {
     var overlay = document.getElementById('overlayPedido');
+    overlay.style.display = 'none';
+}
+
+function abrirFormularioFinanceiro() {
+    var overlay = document.getElementById('overlayFinanceiro');
+    overlay.style.display = 'block';
+}
+
+function fecharFormularioFinanceiro() {
+    var overlay = document.getElementById('overlayFinanceiro');
     overlay.style.display = 'none';
 }

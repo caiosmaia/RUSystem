@@ -1,3 +1,5 @@
+
+
 body {
     margin: 0; /* Remover margens padrão do corpo */
     padding: 0; /* Remover preenchimento padrão do corpo */
@@ -165,6 +167,7 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Transparência para o fundo */
     z-index: 9999; /* Garantir que o overlay esteja na frente de outros elementos */
+    backdrop-filter: blur(10px); /* Adiciona um desfoque ao fundo */
 }
 
 /* Estilos para o formulário de cadastro */
@@ -174,9 +177,10 @@ body::before {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 10000; /* Garantir que o formulário esteja na frente do overlay */
     border: 1px solid #ffffff; /* Adiciona uma borda branca */
+    
 }
 
 
@@ -229,9 +233,14 @@ body::before {
 /* Estilos para os rótulos dos campos dentro do formulário */
 .formulario-cadastro label {
     font-size: 18px; /* Ajusta o tamanho da fonte para os rótulos dos campos */
+    font-family: 'Roboto Slab', sans-serif; /* Altera a fonte para Montserrat */
+    color: #000000; /* Altera a cor para azul escuro */
+
 }
 
 .formulario-cadastro h2 {
+    font-family: 'Roboto Slab', sans-serif; /* Altera a fonte para Montserrat */
+    color: #000000; /* Altera a cor para azul escuro */
     background-color: #ffffff; /* Define um fundo branco para o título */
     padding: 10px; /* Adiciona preenchimento para separar o texto do fundo */
     border-radius: 5px 5px 5px 5px; /* Arredonda apenas os cantos superiores do título */
